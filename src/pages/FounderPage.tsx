@@ -20,7 +20,7 @@ export default function FounderPage() {
             >
               <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-gray-50 bg-gray-200 min-h-[400px]">
                 <img
-                  src="https://ais-file-storage.s3.amazonaws.com/shk5xdjjktkmpftiqphgn4/input_file_2.png"
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
                   alt="Founder"
                   className="w-full h-auto"
                   referrerPolicy="no-referrer"

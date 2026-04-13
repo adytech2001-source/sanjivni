@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "motion/react";
-import { Phone, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Clock, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -53,6 +53,17 @@ export default function ContactPage() {
                 <div className="flex items-center gap-4">
                   <MessageCircle className="text-brand-light-blue" />
                   <span>Instant Support on WhatsApp</span>
+                </div>
+                <div className="pt-6 border-t border-white/10">
+                  <p className="text-sm text-white/50 mb-4 uppercase tracking-widest font-bold">Follow Us</p>
+                  <div className="flex gap-4">
+                    <a href="https://www.facebook.com/sanjivani.career.counseling" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-brand-light-blue hover:text-brand-navy transition-all">
+                      <Facebook size={20} />
+                    </a>
+                    <a href="https://www.instagram.com/sanjivani_career_counseling/?hl=en" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-brand-light-blue hover:text-brand-navy transition-all">
+                      <Instagram size={20} />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

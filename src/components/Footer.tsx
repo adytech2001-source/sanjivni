@@ -57,9 +57,14 @@ export function Footer() {
               Your trusted partner for direct admission and expert career counselling in Gondia and across India.
             </p>
             <div className="flex gap-4">
-              {[Facebook, Instagram, Twitter, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-light-blue hover:text-brand-navy transition-colors">
-                  <Icon size={20} />
+              {[
+                { Icon: Facebook, href: "https://www.facebook.com/sanjivani.career.counseling" },
+                { Icon: Instagram, href: "https://www.instagram.com/sanjivani_career_counseling/?hl=en" },
+                { Icon: Twitter, href: "#" },
+                { Icon: Youtube, href: "#" }
+              ].map((social, i) => (
+                <a key={i} href={social.href} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-light-blue hover:text-brand-navy transition-colors">
+                  <social.Icon size={20} />
                 </a>
               ))}
             </div>

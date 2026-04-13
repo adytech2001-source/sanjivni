@@ -1,15 +1,25 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { Footer, WhatsAppButton } from "./components/Footer";
 import PopupForm from "./components/PopupForm";
 import Home from "./pages/Home";
-import AboutPage from "./pages/AboutPage";
-import FounderPage from "./pages/FounderPage";
-import MBBSPage from "./pages/MBBSPage";
-import BTechPage from "./pages/BTechPage";
-import MBAPage from "./pages/MBAPage";
-import ContactPage from "./pages/ContactPage";
-import MissionPage from "./pages/MissionPage";
+
+// Lazy load other pages
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const FounderPage = lazy(() => import("./pages/FounderPage"));
+const MBBSPage = lazy(() => import("./pages/MBBSPage"));
+const BTechPage = lazy(() => import("./pages/BTechPage"));
+const MBAPage = lazy(() => import("./pages/MBAPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+const MissionPage = lazy(() => import("./pages/MissionPage"));
+
+// Loading fallback
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="w-12 h-12 border-4 border-brand-navy border-t-brand-light-blue rounded-full animate-spin"></div>
+  </div>
+);
 
 export default function App() {
   return (
@@ -17,16 +27,18 @@ export default function App() {
       <div className="min-h-screen bg-white selection:bg-brand-orange-start selection:text-white">
         <Navbar />
         <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/mission" element={<MissionPage />} />
-            <Route path="/founder" element={<FounderPage />} />
-            <Route path="/mbbs" element={<MBBSPage />} />
-            <Route path="/btech" element={<BTechPage />} />
-            <Route path="/mba" element={<MBAPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/mission" element={<MissionPage />} />
+              <Route path="/founder" element={<FounderPage />} />
+              <Route path="/mbbs" element={<MBBSPage />} />
+              <Route path="/btech" element={<BTechPage />} />
+              <Route path="/mba" element={<MBAPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
         <WhatsAppButton />

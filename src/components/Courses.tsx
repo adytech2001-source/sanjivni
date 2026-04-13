@@ -34,8 +34,14 @@ export default function Courses() {
               key={course.name}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={{ y: -5, scale: 1.03 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
+              transition={{ 
+                type: "spring",
+                stiffness: 400,
+                damping: 25,
+                delay: i * 0.05 
+              }}
             >
               <Card className="group hover:shadow-2xl transition-all duration-300 border-none bg-gray-50 hover:bg-white cursor-pointer overflow-hidden">
                 <CardContent className="p-8 flex items-center gap-6">

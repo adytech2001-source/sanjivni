@@ -8,21 +8,42 @@ const testimonials = [
     course: "MBBS Student",
     text: "Sanjivani Career Counselling helped me get admission in a top medical college when I was confused about the process. Their guidance is truly expert.",
     rating: 5,
-    image: "https://i.pravatar.cc/150?u=rahul"
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150"
   },
   {
-    name: "Priya Patel",
-    course: "MBA Student",
-    text: "The direct admission support was seamless. I got into my dream B-school without any hassle. Highly recommended for all students!",
+    name: "Snehal Deshmukh",
+    course: "Medical Aspirant",
+    text: "Smooth aur hassle-free experience tha 👍 NEET counselling aur document verification sab easily ho gaya. Highly recommended for medical admission.",
     rating: 5,
-    image: "https://i.pravatar.cc/150?u=priya"
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150"
   },
   {
-    name: "Amit Verma",
-    course: "B.Tech Student",
-    text: "Transparent process and very supportive staff. They helped me choose the best college according to my budget and preferences.",
+    name: "Vikram Singh",
+    course: "MBBS Candidate",
+    text: "Bahut hi helpful team hai 🙌 MBBS admission ke liye proper guidance mila, har step clearly samjhaya. Stress bilkul nahi hua.",
     rating: 5,
-    image: "https://i.pravatar.cc/150?u=amit"
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150"
+  },
+  {
+    name: "Ananya Verma",
+    course: "NEET Student",
+    text: "Starting me kaafi confusion tha NEET counselling ko lekar, but inhone step-by-step guide kiya. Document verification se lekar college allotment tak full support mila. Medical admission process bahut smooth ho gaya.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150"
+  },
+  {
+    name: "Rohan Gupta",
+    course: "MBBS Student",
+    text: "Genuine aur trusted service hai 💯 MBBS admission ke liye best guidance diya. Team ka response fast tha aur document verification bhi quickly complete ho gaya. Overall experience kaafi acha raha.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=150&h=150"
+  },
+  {
+    name: "Megha Agrawal",
+    course: "Medical Student",
+    text: "Honestly, mujhe medical admission process kaafi complicated lag raha tha, especially NEET counselling aur documents ko lekar. Lekin inki team ne har step pe support diya—Aadhaar, allotment letter, counselling form sab properly verify karwaya. College allotment me bhi correct guidance mila jisse final MBBS admission smoothly ho gaya. Pura process stress-free aur transparent tha.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=150&h=150"
   }
 ];
 
@@ -43,14 +64,20 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -10, scale: 1.02 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              transition={{ 
+                type: "spring",
+                stiffness: 400,
+                damping: 25,
+                delay: i * 0.1 
+              }}
             >
               <Card className="h-full border-none bg-gray-50 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 text-brand-orange-start/10 group-hover:text-brand-orange-start/20 transition-colors">

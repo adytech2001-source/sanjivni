@@ -52,8 +52,14 @@ export default function Updates() {
                   key={i}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
+                  whileHover={{ x: 5, scale: 1.02 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                  transition={{ 
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 25,
+                    delay: i * 0.1 
+                  }}
                 >
                   <Card className="hover:shadow-xl transition-all border-none group cursor-pointer">
                     <CardContent className="p-6 flex gap-4">
