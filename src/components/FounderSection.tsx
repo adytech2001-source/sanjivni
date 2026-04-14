@@ -12,11 +12,11 @@ export default function FounderSection() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-200 min-h-[400px]">
+            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-white">
               <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
+                src="https://i.postimg.cc/9RBLTQxx/founder.png"
                 alt="Founder of Sanjivani Career Counselling"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto block"
                 referrerPolicy="no-referrer"
                 loading="lazy"
               />

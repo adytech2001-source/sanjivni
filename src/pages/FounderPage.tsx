@@ -18,11 +18,11 @@ export default function FounderPage() {
               animate={{ opacity: 1, scale: 1 }}
               className="relative"
             >
-              <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-gray-50 bg-gray-200 min-h-[400px]">
+              <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-gray-50 bg-white">
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"
+                  src="https://i.postimg.cc/9RBLTQxx/founder.png"
                   alt="Founder"
-                  className="w-full h-auto"
+                  className="w-full h-auto block"
                   referrerPolicy="no-referrer"
                 />
               </div>
