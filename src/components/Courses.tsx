@@ -1,17 +1,18 @@
 import { motion } from "motion/react";
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, Stethoscope, Briefcase, Gavel, Cpu, FlaskConical, HeartPulse, Microscope, BookOpen } from "lucide-react";
+import { GraduationCap, Stethoscope, Briefcase, MapPin, Building2, School } from "lucide-react";
 
 const courses = [
-  { name: "MBBS Admission", icon: Stethoscope, color: "bg-red-500" },
-  { name: "B.Tech Admission", icon: Cpu, color: "bg-blue-500" },
-  { name: "MBA Admission", icon: Briefcase, color: "bg-indigo-500" },
-  { name: "Law Admission", icon: Gavel, color: "bg-amber-700" },
-  { name: "MCA Admission", icon: BookOpen, color: "bg-emerald-500" },
-  { name: "BBA Admission", icon: GraduationCap, color: "bg-purple-500" },
-  { name: "Pharmacy Admission", icon: FlaskConical, color: "bg-green-500" },
-  { name: "BDS Admission", icon: HeartPulse, color: "bg-pink-500" },
-  { name: "Allied Courses", icon: Microscope, color: "bg-orange-500" },
+  { name: "Direct Admission in MBBS", icon: Stethoscope, color: "bg-red-500", desc: "Expert guidance for medical seats" },
+  { name: "MBBS in Chhattisgarh", icon: MapPin, color: "bg-orange-500", desc: "Top medical colleges in CG" },
+  { name: "MBBS in Madhya Pradesh", icon: MapPin, color: "bg-blue-500", desc: "Admission support in MP" },
+  { name: "MBBS in Karnataka", icon: MapPin, color: "bg-emerald-500", desc: "Best colleges in Karnataka" },
+  { name: "MBBS in Maharashtra", icon: MapPin, color: "bg-indigo-500", desc: "Medical admission in MH" },
+  { name: "MBBS in Uttar Pradesh", icon: MapPin, color: "bg-purple-500", desc: "Top UP medical universities" },
+  { name: "Top Colleges in Pune", icon: Building2, color: "bg-amber-600", desc: "Direct admission in Pune" },
+  { name: "Top Colleges in Mumbai", icon: Building2, color: "bg-cyan-600", desc: "Secure seats in Mumbai" },
+  { name: "MBA without Entrance", icon: Briefcase, color: "bg-slate-700", desc: "Direct MBA admission support" },
+  { name: "Top Colleges in Bangalore", icon: School, color: "bg-rose-500", desc: "Admission in IT hub colleges" },
 ];
 
 export default function Courses() {
@@ -52,7 +53,7 @@ export default function Courses() {
                     <h4 className="text-xl font-bold text-brand-navy group-hover:text-brand-light-blue transition-colors">
                       {course.name}
                     </h4>
-                    <p className="text-gray-500 text-sm mt-1">Get Direct Admission Support</p>
+                    <p className="text-gray-500 text-sm mt-1">{course.desc}</p>
                   </div>
                 </CardContent>
               </Card>

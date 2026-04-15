@@ -4,12 +4,12 @@ import { GraduationCap, BookOpen, Award, Users, CheckCircle2, MessageCircle, Pho
 import PopupForm from "./PopupForm";
 
 const courses = [
-  "MBA", "B.Tech", "MBBS", "BDS", "MCA", "BBA", "M.Tech", "Pharmacy", "Allied"
+  "MBBS", "MBA", "B.Tech", "Pune", "Mumbai", "Bangalore", "MP", "CG", "UP", "Karnataka"
 ];
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-brand-navy">
+    <section className="relative min-h-screen flex items-center pt-20 pb-24 bg-brand-navy">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-light-blue/10 rounded-full blur-[120px] -mr-64 -mt-64" />
@@ -82,7 +82,7 @@ export default function Hero() {
                 srcSet="https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?auto=format&fit=crop&q=80&w=600 600w, https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?auto=format&fit=crop&q=80&w=1200 1200w, https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?auto=format&fit=crop&q=80&w=2000 2000w"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 alt="Indian Student with Laptop"
-                className="w-full h-auto object-cover min-h-[500px]"
+                className="w-full h-auto object-cover"
                 referrerPolicy="no-referrer"
                 fetchPriority="high"
               />
