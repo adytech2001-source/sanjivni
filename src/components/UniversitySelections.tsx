@@ -2,14 +2,14 @@ import { motion } from "motion/react";
 import { GraduationCap, School, Building2, MapPin } from "lucide-react";
 
 const universities = [
-  { name: "IIT Bombay", category: "Engineering", location: "Maharashtra", logo: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=200&h=200" },
-  { name: "AIIMS Delhi", category: "Medical", location: "Delhi", logo: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=200&h=200" },
-  { name: "NIT Nagpur", category: "Engineering", location: "Maharashtra", logo: "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=200&h=200" },
-  { name: "IIT Indore", category: "Engineering", location: "Madhya Pradesh", logo: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=200&h=200" },
-  { name: "AIIMS Raipur", category: "Medical", location: "Chhattisgarh", logo: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=200&h=200" },
-  { name: "COEP Pune", category: "Engineering", location: "Maharashtra", logo: "https://images.unsplash.com/photo-1525921429624-479b6a29d84c?auto=format&fit=crop&q=80&w=200&h=200" },
-  { name: "DAVV Indore", category: "University", location: "Madhya Pradesh", logo: "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?auto=format&fit=crop&q=80&w=200&h=200" },
-  { name: "NIT Raipur", category: "Engineering", location: "Chhattisgarh", logo: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=200&h=200" },
+  { name: "IIT Bombay", category: "Engineering", location: "Maharashtra", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg/1200px-Indian_Institute_of_Technology_Bombay_Logo.svg.png" },
+  { name: "AIIMS Delhi", category: "Medical", location: "Delhi", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/0/08/All_India_Institute_of_Medical_Sciences%2C_New_Delhi_Logo.svg/1200px-All_India_Institute_of_Medical_Sciences%2C_New_Delhi_Logo.svg.png" },
+  { name: "VNIT Nagpur", category: "Engineering", location: "Maharashtra", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/VNIT_Nagpur_logo.png/220px-VNIT_Nagpur_logo.png" },
+  { name: "IIT Indore", category: "Engineering", location: "Madhya Pradesh", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b2/Indian_Institute_of_Technology_Indore_logo.png/220px-Indian_Institute_of_Technology_Indore_logo.png" },
+  { name: "AIIMS Raipur", category: "Medical", location: "Chhattisgarh", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/All_India_Institute_of_Medical_Sciences%2C_Raipur_logo.png/220px-All_India_Institute_of_Medical_Sciences%2C_Raipur_logo.png" },
+  { name: "COEP Pune", category: "Engineering", location: "Maharashtra", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/COEP_logo.png/220px-COEP_logo.png" },
+  { name: "DAVV Indore", category: "University", location: "Madhya Pradesh", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Devi_Ahilya_Vishwavidyalaya_logo.png/220px-Devi_Ahilya_Vishwavidyalaya_logo.png" },
+  { name: "NIT Raipur", category: "Engineering", location: "Chhattisgarh", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/National_Institute_of_Technology%2C_Raipur_logo.png/220px-National_Institute_of_Technology%2C_Raipur_logo.png" },
 ];
 
 export default function UniversitySelections() {
