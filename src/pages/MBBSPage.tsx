@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { Stethoscope, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -39,9 +40,16 @@ export default function MBBSPage() {
             >
               We provide admission in top medical colleges through management quota. Secure your seat in the most reputed medical institutions.
             </motion.p>
-            <Button size="lg" className="bg-brand-light-blue text-brand-navy hover:bg-white px-8 font-bold h-14 text-lg rounded-xl">
-              Enquire Now
-            </Button>
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="bg-brand-light-blue text-brand-navy hover:bg-white px-8 font-bold h-14 text-lg rounded-xl">
+                Enquire Now
+              </Button>
+              <Link to="/deemed-mbbs">
+                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 px-8 font-bold h-14 text-lg rounded-xl flex items-center gap-2">
+                  Deemed University Fees <ArrowRight size={18} />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">

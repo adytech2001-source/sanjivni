@@ -11,8 +11,12 @@ const FounderPage = lazy(() => import("./pages/FounderPage"));
 const MBBSPage = lazy(() => import("./pages/MBBSPage"));
 const BTechPage = lazy(() => import("./pages/BTechPage"));
 const MBAPage = lazy(() => import("./pages/MBAPage"));
+const DeemedMBBSPage = lazy(() => import("./pages/DeemedMBBSPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const MissionPage = lazy(() => import("./pages/MissionPage"));
+const MaharashtraPrivateMBBS = lazy(() => import("./pages/MaharashtraPrivateMBBS"));
+const MPPrivateMBBS = lazy(() => import("./pages/MPPrivateMBBS"));
+const ChhattisgarhPrivateMBBS = lazy(() => import("./pages/ChhattisgarhPrivateMBBS"));
 
 // Loading fallback
 const PageLoader = () => (
@@ -34,6 +38,10 @@ export default function App() {
               <Route path="/mission" element={<MissionPage />} />
               <Route path="/founder" element={<FounderPage />} />
               <Route path="/mbbs" element={<MBBSPage />} />
+              <Route path="/deemed-mbbs" element={<DeemedMBBSPage />} />
+              <Route path="/maharashtra-private-mbbs" element={<MaharashtraPrivateMBBS />} />
+              <Route path="/mp-private-mbbs" element={<MPPrivateMBBS />} />
+              <Route path="/chhattisgarh-private-mbbs" element={<ChhattisgarhPrivateMBBS />} />
               <Route path="/btech" element={<BTechPage />} />
               <Route path="/mba" element={<MBAPage />} />
               <Route path="/contact" element={<ContactPage />} />

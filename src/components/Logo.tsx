@@ -58,10 +58,10 @@ export default function Logo({ isScrolled, isHome }: { isScrolled: boolean; isHo
         </svg>
       </div>
       <div className="flex flex-col">
-        <span className={`font-bold text-xl leading-tight tracking-tight ${isScrolled || !isHome ? "text-brand-navy" : "text-white"}`}>
+        <span className={`font-bold text-xl leading-tight tracking-tight ${isScrolled || !isHome ? "text-primary" : "text-white"}`}>
           SANJIVANI
         </span>
-        <span className={`text-[10px] font-bold uppercase tracking-[0.2em] ${isScrolled || !isHome ? "text-brand-navy/70" : "text-white/80"}`}>
+        <span className={`text-[10px] font-bold uppercase tracking-[0.2em] ${isScrolled || !isHome ? "text-primary/70" : "text-white/80"}`}>
           Career Counselling
         </span>
       </div>

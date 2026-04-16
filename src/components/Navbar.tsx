@@ -41,6 +41,10 @@ export default function Navbar() {
       href: "#",
       dropdown: [
         { name: "MBBS Admission", href: "/mbbs" },
+        { name: "Deemed MBBS", href: "/deemed-mbbs" },
+        { name: "Maharashtra Private MBBS", href: "/maharashtra-private-mbbs" },
+        { name: "MP Private MBBS", href: "/mp-private-mbbs" },
+        { name: "Chhattisgarh Private MBBS", href: "/chhattisgarh-private-mbbs" },
         { name: "B.Tech Admission", href: "/btech" },
         { name: "MBA Admission", href: "/mba" },
       ],
@@ -68,7 +72,7 @@ export default function Navbar() {
               {link.dropdown ? (
                 <button
                   className={`flex items-center gap-1 font-medium transition-colors hover:text-brand-light-blue ${
-                    isScrolled || !isHome ? "text-brand-navy" : "text-white"
+                    isScrolled || !isHome ? "text-primary" : "text-white"
                   }`}
                 >
                   {link.name} <ChevronDown size={14} />
@@ -77,7 +81,7 @@ export default function Navbar() {
                 <Link
                   to={link.href}
                   className={`font-medium transition-colors hover:text-brand-light-blue ${
-                    isScrolled || !isHome ? "text-brand-navy" : "text-white"
+                    isScrolled || !isHome ? "text-primary" : "text-white"
                   }`}
                 >
                   {link.name}
@@ -91,7 +95,7 @@ export default function Navbar() {
                       <Link
                         key={sub.name}
                         to={sub.href}
-                        className="block py-2 px-4 text-brand-navy hover:text-brand-light-blue hover:bg-gray-50 rounded-lg transition-colors font-medium"
+                        className="block py-2 px-4 text-primary hover:text-brand-light-blue hover:bg-gray-50 rounded-lg transition-colors font-medium"
                       >
                         {sub.name}
                       </Link>
@@ -116,9 +120,9 @@ export default function Navbar() {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
-            <X className={isScrolled || !isHome ? "text-brand-navy" : "text-white"} />
+            <X className={isScrolled || !isHome ? "text-primary" : "text-white"} />
           ) : (
-            <Menu className={isScrolled || !isHome ? "text-brand-navy" : "text-white"} />
+            <Menu className={isScrolled || !isHome ? "text-primary" : "text-white"} />
           )}
         </button>
       </div>
@@ -136,12 +140,12 @@ export default function Navbar() {
               <div key={link.name}>
                 {link.dropdown ? (
                   <div className="space-y-2">
-                    <p className="text-brand-navy font-bold px-4 py-2 bg-gray-50 rounded-lg">{link.name}</p>
+                    <p className="text-primary font-bold px-4 py-2 bg-gray-50 rounded-lg">{link.name}</p>
                     {link.dropdown.map((sub) => (
                       <Link
                         key={sub.name}
                         to={sub.href}
-                        className="block text-brand-navy font-medium py-2 px-8 border-b border-gray-100"
+                        className="block text-primary font-medium py-2 px-8 border-b border-gray-100"
                       >
                         {sub.name}
                       </Link>
@@ -150,7 +154,7 @@ export default function Navbar() {
                 ) : (
                   <Link
                     to={link.href}
-                    className="block text-brand-navy font-medium py-2 px-4 border-b border-gray-100"
+                    className="block text-primary font-medium py-2 px-4 border-b border-gray-100"
                   >
                     {link.name}
                   </Link>

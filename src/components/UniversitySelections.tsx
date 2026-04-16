@@ -1,5 +1,7 @@
-import { motion } from "motion/react";
-import { GraduationCap, School, Building2, MapPin } from "lucide-react";
+import { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { GraduationCap, School, Building2, MapPin, Search, X } from "lucide-react";
+import { Input } from "@/components/ui/input";
 
 const universities = [
   { name: "IIT Bombay", category: "Engineering", location: "Maharashtra", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg/1200px-Indian_Institute_of_Technology_Bombay_Logo.svg.png" },
@@ -13,6 +15,20 @@ const universities = [
 ];
 
 export default function UniversitySelections() {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredUniversities = useMemo(() => {
+    const query = searchQuery.toLowerCase().trim();
+    if (!query) return universities;
+
+    return universities.filter(
+      (uni) =>
+        uni.name.toLowerCase().includes(query) ||
+        uni.category.toLowerCase().includes(query) ||
+        uni.location.toLowerCase().includes(query)
+    );
+  }, [searchQuery]);
+
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       {/* Background subtle pattern */}
@@ -47,49 +63,100 @@ export default function UniversitySelections() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-gray-600 text-lg"
+            className="text-gray-600 text-lg mb-10"
           >
             We take pride in our students who have secured admissions in India's most prestigious institutions through our expert guidance and support.
           </motion.p>
+
+          {/* Search Bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="relative max-w-md mx-auto"
+          >
+            <div className="relative group">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-brand-light-blue transition-colors" size={20} />
+              <Input
+                type="text"
+                placeholder="Search by name, category, or state..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-12 pr-12 h-14 rounded-2xl border-gray-100 bg-gray-50/50 focus:bg-white focus:ring-brand-light-blue/20 focus:border-brand-light-blue transition-all text-lg shadow-sm"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-brand-navy transition-colors"
+                >
+                  <X size={18} />
+                </button>
+              )}
+            </div>
+          </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-          {universities.map((uni, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ y: -10 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="group bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand-light-blue/30 transition-all duration-500 flex flex-col items-center text-center"
-            >
-              <div className="relative w-24 h-24 mb-6">
-                <div className="absolute inset-0 bg-brand-navy/5 rounded-2xl group-hover:bg-brand-light-blue/10 transition-colors duration-500" />
-                <img
-                  src={uni.logo}
-                  alt={uni.name}
-                  className="w-full h-full object-contain p-4 relative z-10 grayscale group-hover:grayscale-0 transition-all duration-500"
-                  referrerPolicy="no-referrer"
-                  loading="lazy"
-                />
-              </div>
-              
-              <h4 className="text-brand-navy font-bold text-lg mb-1 group-hover:text-brand-light-blue transition-colors">
-                {uni.name}
-              </h4>
-              
-              <div className="flex items-center gap-1.5 text-gray-400 text-xs font-medium uppercase tracking-wider mb-2">
-                <School size={12} />
-                <span>{uni.category}</span>
-              </div>
-              
-              <div className="mt-auto pt-4 border-t border-gray-50 w-full flex items-center justify-center gap-1.5 text-gray-500 text-sm">
-                <MapPin size={14} className="text-brand-light-blue" />
-                <span>{uni.location}</span>
-              </div>
-            </motion.div>
-          ))}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 min-h-[400px]">
+          <AnimatePresence mode="popLayout">
+            {filteredUniversities.length > 0 ? (
+              filteredUniversities.map((uni, i) => (
+                <motion.div
+                  key={uni.name}
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  whileHover={{ y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="group bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand-light-blue/30 transition-all duration-500 flex flex-col items-center text-center"
+                >
+                  <div className="relative w-24 h-24 mb-6">
+                    <div className="absolute inset-0 bg-brand-navy/5 rounded-2xl group-hover:bg-brand-light-blue/10 transition-colors duration-500" />
+                    <img
+                      src={uni.logo}
+                      alt={uni.name}
+                      className="w-full h-full object-contain p-4 relative z-10 grayscale group-hover:grayscale-0 transition-all duration-500"
+                      referrerPolicy="no-referrer"
+                      loading="lazy"
+                    />
+                  </div>
+                  
+                  <h4 className="text-brand-navy font-bold text-lg mb-1 group-hover:text-brand-light-blue transition-colors">
+                    {uni.name}
+                  </h4>
+                  
+                  <div className="flex items-center gap-1.5 text-gray-400 text-xs font-medium uppercase tracking-wider mb-2">
+                    <School size={12} />
+                    <span>{uni.category}</span>
+                  </div>
+                  
+                  <div className="mt-auto pt-4 border-t border-gray-50 w-full flex items-center justify-center gap-1.5 text-gray-500 text-sm">
+                    <MapPin size={14} className="text-brand-light-blue" />
+                    <span>{uni.location}</span>
+                  </div>
+                </motion.div>
+              ))
+            ) : (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="col-span-full flex flex-col items-center justify-center py-20 text-center"
+              >
+                <div className="w-20 h-20 rounded-full bg-gray-50 flex items-center justify-center text-gray-300 mb-4">
+                  <Search size={40} />
+                </div>
+                <h3 className="text-xl font-bold text-brand-navy mb-2">No results found</h3>
+                <p className="text-gray-500">Try searching for a different university, category, or location.</p>
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="mt-6 text-brand-light-blue font-bold hover:underline"
+                >
+                  Clear all filters
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         {/* Trust Indicators */}
