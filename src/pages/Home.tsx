@@ -3,6 +3,7 @@ import { useEffect } from "react"
 
 // Immediately visible components
 import Hero from "@/components/Hero"
+import NoticeSection from "@/components/NoticeSection"
 import UniversitySelections from "@/components/UniversitySelections"
 import About from "@/components/About"
 import FounderSection from "@/components/FounderSection"
@@ -31,6 +32,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <NoticeSection />
       <UniversitySelections />
       <About />
       <FounderSection />
