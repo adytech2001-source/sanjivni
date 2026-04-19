@@ -127,8 +127,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-10 border-t border-white/10 text-center text-white/40 text-sm">
-          <p>© 2026 Sanjivani Career Counselling. All Rights Reserved. Designed for Excellence.</p>
+        <div className="pt-10 border-t border-white/10 text-center text-white/40 text-sm flex flex-col items-center gap-1">
+          <p>© 2026 Sanjivani Career Counselling. All Rights Reserved.</p>
+          <p>
+            Design by <a href="tel:7581001715" className="hover:text-brand-light-blue transition-colors font-medium">Aybuzz Digital Marketing</a> | Call: <a href="tel:7581001715" className="hover:text-brand-light-blue transition-colors">7581001715</a>
+          </p>
         </div>
       </div>
     </footer>
