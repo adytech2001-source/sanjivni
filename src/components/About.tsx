@@ -14,7 +14,7 @@ export default function About() {
           >
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1521791136064-7986c2923216?auto=format&fit=crop&q=80&w=800"
+                src="https://images.unsplash.com/photo-1544531585-9847b68c8c86?auto=format&fit=crop&q=80&w=800"
                 alt="Counselling Session"
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
