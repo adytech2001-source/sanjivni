@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "motion/react";
-import { Phone, Mail, MapPin, MessageCircle, Clock, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -24,22 +25,28 @@ export default function ContactPage() {
 
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {[
-              { icon: Phone, title: "Call Us", content: "+91 8329095925", sub: "Mon-Sat, 9am - 7pm" },
-              { icon: Mail, title: "Email Us", content: "info@sanjivanicounselling.com", sub: "We reply within 24 hours" },
-              { icon: MapPin, title: "Visit Us", content: "Gondia, Maharashtra", sub: "Near Chitnavis Hospital" },
+              { icon: Phone, title: "Call Us", content: "+91 8329095925", sub: "Mon-Sat, 9am - 7pm", link: "tel:+918329095925" },
+              { icon: Mail, title: "Email Us", content: "info@sanjivanicounselling.com", sub: "We reply within 24 hours", link: "mailto:info@sanjivanicounselling.com" },
+              { icon: MapPin, title: "Visit Us", content: "Gondia, Maharashtra", sub: "Near Chitnavis Hospital", link: "https://share.google/SnIXJpiBImTZ4dBsb" },
             ].map((item, i) => (
-              <div key={i} className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center flex flex-col items-center">
-                <div className="w-16 h-16 rounded-2xl bg-brand-light-blue/10 flex items-center justify-center text-brand-light-blue mb-6">
+              <a 
+                key={i} 
+                href={item.link}
+                target={item.title === "Visit Us" ? "_blank" : undefined}
+                rel={item.title === "Visit Us" ? "noreferrer" : undefined}
+                className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center flex flex-col items-center hover:shadow-md transition-all group"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-brand-light-blue/10 flex items-center justify-center text-brand-light-blue mb-6 group-hover:scale-110 transition-transform">
                   <item.icon size={32} />
                 </div>
                 <h4 className="text-xl font-bold text-brand-navy mb-2">{item.title}</h4>
                 <p className="text-brand-navy font-bold text-lg mb-1">{item.content}</p>
                 <p className="text-gray-500 text-sm">{item.sub}</p>
-              </div>
+              </a>
             ))}
           </div>
 
-          <div className="max-w-5xl mx-auto bg-white rounded-[2.5rem] shadow-xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
+          <div className="max-w-5xl mx-auto bg-white rounded-[2.5rem] shadow-xl overflow-hidden flex flex-col md:flex-row border border-gray-100 mb-16">
             <div className="md:w-1/2 p-12 bg-brand-navy text-white">
               <h3 className="text-3xl font-bold mb-6">Send us a Message</h3>
               <p className="text-white/70 mb-8">
@@ -51,7 +58,7 @@ export default function ContactPage() {
                   <span>Available 10:00 AM - 08:00 PM</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <MessageCircle className="text-brand-light-blue" />
+                  <WhatsAppIcon className="text-brand-light-blue" size={20} />
                   <span>Instant Support on WhatsApp</span>
                 </div>
                 <div className="pt-6 border-t border-white/10">
@@ -90,6 +97,20 @@ export default function ContactPage() {
                 <Button className="w-full bg-brand-navy hover:bg-brand-light-blue hover:text-brand-navy h-12 font-bold text-white transition-colors">Send Message</Button>
               </form>
             </div>
+          </div>
+
+          <div className="bg-white rounded-[2.5rem] shadow-xl overflow-hidden border border-gray-100 h-[450px]">
+            <iframe
+              src="https://www.google.com/maps?q=Sanjivani+Career+Counselling+Gondia&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Sanjivani Career Counselling Location"
+              className="grayscale hover:grayscale-0 transition-all duration-500"
+            ></iframe>
           </div>
         </div>
       </section>

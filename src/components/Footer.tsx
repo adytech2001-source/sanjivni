@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { motion } from "motion/react";
+import Logo from "./Logo";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 export function FinalCTA() {
   return (
@@ -29,7 +31,7 @@ export function FinalCTA() {
             Don't wait! Secure your seat in top colleges today. Our experts are ready to guide you through the entire process.
           </p>
           <Button size="lg" className="bg-[#25D366] hover:bg-[#128C7E] text-white px-10 h-16 text-xl font-bold rounded-2xl flex items-center gap-3 mx-auto shadow-xl shadow-green-500/20">
-            <MessageCircle size={28} />
+            <WhatsAppIcon size={28} />
             Enquire on WhatsApp
           </Button>
         </motion.div>
@@ -44,15 +46,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-brand-light-blue rounded-lg flex items-center justify-center text-brand-navy font-bold text-xl">
-                S
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-lg leading-tight">Sanjivani</span>
-                <span className="text-xs font-medium text-white/70">Career Counselling</span>
-              </div>
-            </div>
+            <Logo isScrolled={false} isHome={false} />
             <p className="text-white/60 leading-relaxed">
               Your trusted partner for direct admission and expert career counselling in Gondia and across India.
             </p>
@@ -146,7 +140,7 @@ export function WhatsAppButton() {
       rel="noreferrer"
       className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-2xl hover:scale-110 transition-transform animate-bounce"
     >
-      <MessageCircle size={36} />
+      <WhatsAppIcon size={36} />
     </a>
   );
 }

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "motion/react";
-import { Award, BookOpen, Target, MessageCircle } from "lucide-react";
+import { Award, BookOpen, Target, GraduationCap, Calendar, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function FounderPage() {
@@ -33,31 +33,35 @@ export default function FounderPage() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
             >
-              <h1 className="text-4xl md:text-5xl font-extrabold text-brand-navy mb-6">About the Founder</h1>
+              <h1 className="text-4xl md:text-5xl font-extrabold text-brand-navy mb-4">Shersing V. Tembhurnikar</h1>
+              <p className="text-brand-light-blue font-bold text-xl mb-6">Founder & Professional Counselor</p>
+              
               <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-                The founder of Sanjivani Career Counselling is a dedicated education expert with over 10 years of experience in guiding students.
+                Hello, I am Shersing V. Tembhurnikar, a professional counselor with 10+ years of experience in helping individuals overcome admission challenges and secure seats in top colleges across India.
               </p>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                They have helped students gain admission in MBBS, B.Tech, MBA and other courses through expert counselling and a strong network of colleges.
+                Sanjivani Career Counselling was founded with a mission to guide students toward the right career path and simplify the admission process, especially for complex medical and engineering entrance cycles.
               </p>
 
               <div className="bg-brand-navy/5 p-8 rounded-3xl border border-brand-navy/10 mb-8">
                 <p className="text-brand-navy italic text-xl font-medium mb-4">
-                  "Success begins with the right decision. We are here to guide you at every step."
+                  "Every student deserves the right guidance to reach their full potential. Our goal is to help you achieve your dreams with confidence and clarity."
                 </p>
-                <p className="text-brand-gold font-bold">— Personal Message</p>
+                <p className="text-brand-gold font-bold">— Shersing V. Tembhurnikar</p>
               </div>
 
-              <h3 className="text-2xl font-bold text-brand-navy mb-6">Expertise</h3>
+              <h3 className="text-2xl font-bold text-brand-navy mb-6">Qualifications & Expertise</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
-                  { icon: Target, text: "Career Counselling" },
-                  { icon: Award, text: "Direct Admission Process" },
-                  { icon: BookOpen, text: "College Selection Strategy" },
-                  { icon: MessageCircle, text: "Student Guidance" },
+                  { icon: GraduationCap, text: "B.Tech, MBA", color: "text-blue-600" },
+                  { icon: Award, text: "Professional Certifications", color: "text-amber-600" },
+                  { icon: Calendar, text: "10+ Years Experience", color: "text-green-600" },
+                  { icon: Users, text: "1000+ Happy Clients", color: "text-brand-light-blue" },
+                  { icon: Target, text: "College Selection Strategy", color: "text-red-600" },
+                  { icon: BookOpen, text: "Direct Admission Expert", color: "text-purple-600" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
-                    <item.icon className="text-brand-light-blue" size={20} />
+                    <item.icon className={item.color} size={20} />
                     <span className="font-semibold text-brand-navy">{item.text}</span>
                   </div>
                 ))}

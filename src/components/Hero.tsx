@@ -42,10 +42,7 @@ export default function Hero() {
                 loading="lazy"
                 fetchPriority="high"
               />
-              {/* Optional: Subtle overlay to ensure navbar visibility if needed, 
-                  but user asked for "only img", so keeping it clean. 
-                  However, a very light top gradient helps the navbar. */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 pointer-events-none" />
             </div>
           </SwiperSlide>
         ))}

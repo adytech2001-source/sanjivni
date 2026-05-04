@@ -383,6 +383,67 @@ export default function DeemedMBBSPage() {
         </div>
       </section>
 
+      {/* Required Documents Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="bg-brand-navy rounded-[3rem] p-8 md:p-16 text-white overflow-hidden relative shadow-2xl">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-light-blue/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
+            
+            <div className="relative z-10">
+              <div className="mb-12 text-center md:text-left">
+                <h2 className="text-3xl md:text-5xl font-extrabold mb-4">Required Documents</h2>
+                <p className="text-brand-light-blue font-bold text-lg">For NEET UG Counselling 2026–27</p>
+                <div className="h-1.5 w-24 bg-brand-gold mt-4 rounded-full mx-auto md:mx-0"></div>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  "10th Marksheet and Certificate",
+                  "12th Marksheet and Certificate",
+                  "Transfer/Leaving Certificate",
+                  "Migration Certificate",
+                  "Character Certificate (if applicable)",
+                  "Aadhaar Card",
+                  "PAN Card (if applicable)",
+                  "Domicile Certificate (if applicable)",
+                  "Caste Certificate (if applicable)",
+                  "Caste Validity (if applicable)",
+                  "Non-creamy layer Certificate (current year, if applicable)",
+                  "NEET Admit Card",
+                  "NEET Application Form",
+                  "NEET Score Card",
+                  "Passport-size photo",
+                  "Gap Certificate (if applicable)",
+                  "Medical Fitness Certificate",
+                ].map((doc, index) => (
+                  <motion.div 
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                    key={index} 
+                    className="flex items-start gap-3 group"
+                  >
+                    <div className="mt-1 w-6 h-6 rounded-lg bg-brand-light-blue flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <CheckCircle2 size={14} className="text-brand-navy" strokeWidth={3} />
+                    </div>
+                    <span className="text-white/90 font-medium">{doc}</span>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="mt-16 p-6 md:p-8 bg-white/5 border border-white/10 rounded-3xl">
+                <p className="text-brand-light-blue font-bold mb-2">💡 Pro Tip:</p>
+                <p className="text-white/70 text-sm leading-relaxed">
+                  Keep at least 3 sets of photocopies (attested) and original documents ready in a folder before the counselling starts. For specialized categories, ensure your certificates are from the current financial year.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <LeadForm />
     </div>
   );

@@ -19,13 +19,23 @@ export default function NoticeSection() {
         >
           {/* Left Side - Notice Title & Message */}
           <div className="bg-white p-8 md:w-3/5 flex flex-col justify-center">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="bg-red-500 p-3 rounded-2xl text-white shadow-lg animate-pulse">
-                <Megaphone size={28} />
+            <div className="mb-8">
+              <div className="mb-4">
+                <h3 className="text-3xl md:text-4xl font-black text-brand-light-blue uppercase tracking-tighter leading-none mb-1">
+                  NEET UG 2026–27
+                </h3>
+                <div className="text-xl md:text-2xl font-bold text-brand-navy uppercase tracking-widest inline-block border-b-4 border-brand-light-blue pb-1">
+                  Admissions Now Open
+                </div>
               </div>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-brand-navy">
-                NEET (UG) 2025 <span className="text-red-500">Result Out</span>
-              </h2>
+              <div className="flex items-center gap-3">
+                <div className="bg-red-500 p-3 rounded-2xl text-white shadow-lg animate-pulse">
+                  <Megaphone size={28} />
+                </div>
+                <h2 className="text-xl md:text-2xl font-extrabold text-brand-navy">
+                  NEET (UG) 2025 <span className="text-red-500">Result Out</span>
+                </h2>
+              </div>
             </div>
 
             <p className="text-gray-700 text-lg leading-relaxed mb-8">
@@ -45,10 +55,10 @@ export default function NoticeSection() {
                   8329095925
                 </a>
                 <a 
-                  href="tel:+918390029069" 
+                  href="tel:+919673206618" 
                   className="bg-white text-brand-navy border-2 border-brand-navy px-6 py-3 rounded-xl font-bold hover:bg-brand-navy hover:text-white transition-all shadow-md flex items-center gap-2"
                 >
-                  8390029069
+                  9673206618
                 </a>
               </div>
             </div>

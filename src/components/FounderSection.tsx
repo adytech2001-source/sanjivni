@@ -36,30 +36,45 @@ export default function FounderSection() {
             viewport={{ once: true }}
           >
             <h2 className="text-brand-gold font-bold text-lg mb-2 uppercase tracking-wider">Meet Our Founder</h2>
-            <h3 className="text-4xl md:text-5xl font-extrabold text-brand-navy mb-6 leading-tight">
-              Leading with <span className="text-brand-light-blue">Experience & Vision</span>
+            <h3 className="text-4xl md:text-5xl font-extrabold text-brand-navy mb-4 leading-tight">
+              Shersing V. <span className="text-brand-light-blue">Tembhurnikar</span>
             </h3>
+            <p className="text-brand-navy font-bold text-xl mb-4">Professional Admission Counselor</p>
+            
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              Sanjivani Career Counselling was founded with a mission to guide students toward the right career path and simplify the admission process.
+              Sanjivani Career Counselling was founded with a mission to guide students toward the right career path and simplify the admission process. 
             </p>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              With over a decade of experience in education consulting, the founder has helped 1000+ students secure admission in top colleges across India.
+              Hello, I am Shersing V. Tembhurnikar, a professional counselor with 10+ years of experience in helping individuals overcome admission challenges and secure seats in top colleges.
             </p>
 
-            <div className="grid grid-cols-2 gap-6">
-              <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                <div className="w-12 h-12 rounded-xl bg-brand-light-blue/10 flex items-center justify-center text-brand-light-blue mb-4">
-                  <Award size={24} />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div className="flex items-center gap-3 p-4 bg-white rounded-2xl shadow-sm border border-gray-100 group hover:border-brand-light-blue transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-brand-light-blue/10 flex items-center justify-center text-brand-light-blue group-hover:bg-brand-light-blue group-hover:text-white transition-all">
+                  <GraduationCap size={20} />
                 </div>
-                <h4 className="font-bold text-brand-navy text-xl">10+ Years</h4>
-                <p className="text-gray-500 text-sm">Expertise in Consulting</p>
+                <span className="font-bold text-brand-navy">B.Tech, MBA</span>
               </div>
-              <div className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                <div className="w-12 h-12 rounded-xl bg-brand-navy/10 flex items-center justify-center text-brand-navy mb-4">
-                  <Users size={24} />
+              
+              <div className="flex items-center gap-3 p-4 bg-white rounded-2xl shadow-sm border border-gray-100 group hover:border-brand-light-blue transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-all">
+                  <Award size={20} />
                 </div>
-                <h4 className="font-bold text-brand-navy text-xl">1000+</h4>
-                <p className="text-gray-500 text-sm">Students Guided</p>
+                <span className="font-bold text-brand-navy">Certifications</span>
+              </div>
+
+              <div className="flex items-center gap-3 p-4 bg-white rounded-2xl shadow-sm border border-gray-100 group hover:border-brand-light-blue transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-green-600 group-hover:bg-green-600 group-hover:text-white transition-all">
+                  <Award size={20} />
+                </div>
+                <span className="font-bold text-brand-navy">10+ Years Exp.</span>
+              </div>
+
+              <div className="flex items-center gap-3 p-4 bg-white rounded-2xl shadow-sm border border-gray-100 group hover:border-brand-light-blue transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                  <Users size={20} />
+                </div>
+                <span className="font-bold text-brand-navy">1000+ Happy Clients</span>
               </div>
             </div>
           </motion.div>

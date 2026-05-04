@@ -4,46 +4,137 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
-    name: "Rahul Sharma",
-    course: "MBBS Student",
-    text: "Sanjivani Career Counselling helped me get admission in a top medical college when I was confused about the process. Their guidance is truly expert.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150"
-  },
-  {
-    name: "Snehal Deshmukh",
+    name: "Yogesh",
     course: "Medical Aspirant",
-    text: "Smooth aur hassle-free experience tha 👍 NEET counselling aur document verification sab easily ho gaya. Highly recommended for medical admission.",
+    text: "Mujhe bilkul clear idea mil gaya ki kaunsa course choose karna hai.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150"
+    image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=200&h=200&auto=format&fit=crop"
   },
   {
-    name: "Vikram Singh",
-    course: "MBBS Candidate",
-    text: "Bahut hi helpful team hai 🙌 MBBS admission ke liye proper guidance mila, har step clearly samjhaya. Stress bilkul nahi hua.",
+    name: "Mrunali Abhinandan Kukade",
+    course: "NEET UG Candidate",
+    text: "Confusion bahut tha, par yaha se proper guidance mili.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150"
+    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=200&h=200&auto=format&fit=crop"
   },
   {
-    name: "Ananya Verma",
-    course: "NEET Student",
-    text: "Starting me kaafi confusion tha NEET counselling ko lekar, but inhone step-by-step guide kiya. Document verification se lekar college allotment tak full support mila. Medical admission process bahut smooth ho gaya.",
+    name: "Mitali Bhavarao Bhatmange",
+    course: "MBBS Aspirant",
+    text: "Career select karne me bahut help mili, thank you sir.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150"
+    image: "https://images.unsplash.com/photo-1643297654416-05795d309062?q=80&w=200&h=200&auto=format&fit=crop"
   },
   {
-    name: "Rohan Gupta",
-    course: "MBBS Student",
-    text: "Genuine aur trusted service hai 💯 MBBS admission ke liye best guidance diya. Team ka response fast tha aur document verification bhi quickly complete ho gaya. Overall experience kaafi acha raha.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=150&h=150"
-  },
-  {
-    name: "Megha Agrawal",
+    name: "Vaishnavi Yogendra Jatare",
     course: "Medical Student",
-    text: "Honestly, mujhe medical admission process kaafi complicated lag raha tha, especially NEET counselling aur documents ko lekar. Lekin inki team ne har step pe support diya—Aadhaar, allotment letter, counselling form sab properly verify karwaya. College allotment me bhi correct guidance mila jisse final MBBS admission smoothly ho gaya. Pura process stress-free aur transparent tha.",
+    text: "Best counseling experience, sab clearly samjhaya gaya.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=150&h=150"
+    image: "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Drishti Rajendra Bopche",
+    course: "Counselling Student",
+    text: "College selection me bahut help hui, recommend karungi.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Smruti Rakesh Waghmare",
+    course: "Future Doctor",
+    text: "Mujhe apna right path mil gaya, thanks a lot.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1631217816660-ad48c9035825?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Shubhangi Prakash Dewkar",
+    course: "NEET Candidate",
+    text: "Bahut supportive guidance mili yaha se.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1607990281513-2c110a25bb8c?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Praduman Umesh Borkar",
+    course: "Medical Aspirant",
+    text: "Sahi direction milne ke baad confidence badh gaya.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Anshika Tembhare",
+    course: "Counselling Student",
+    text: "Simple aur clear guidance, easily samajh aa gaya.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Yashwardhan Puri",
+    course: "Future Professional",
+    text: "Career ke liye best decision lene me help mili.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Aman Rupesh Ramteke",
+    course: "Medical Aspirant",
+    text: "Mujhe kaafi clarity mili future ke liye.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1542343633-ce3256121f03?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Riya Yesharam Dhabale",
+    course: "NEET Aspirant",
+    text: "Friendly aur helpful counseling thi.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Lalita Dalikram Pataihe",
+    course: "Counselling Student",
+    text: "Bahut acha experience raha, thank you.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1563236710-85f69c5e6f66?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Purva Ramteke",
+    course: "MBBS Aspirant",
+    text: "Step by step guidance mili, easy ho gaya decide karna.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1605684954998-685c79d6a018?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Revnath Ramteke",
+    course: "Medical Student",
+    text: "Accurate advice mila, kaafi helpful raha.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Asit Vasantkumar Shahane",
+    course: "NEET Candidate",
+    text: "Professional guidance aur proper explanation mila.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Yashowardhan Ganesh Puri",
+    course: "Career Aspirant",
+    text: "Clear roadmap diya gaya career ka.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Anshika Yopendrsingh Tembhre",
+    course: "Counselling Student",
+    text: "Confusion door ho gaya counseling ke baad.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1557053910-d9eadeed1c58?q=80&w=200&h=200&auto=format&fit=crop"
+  },
+  {
+    name: "Kushal Purendranath Chakore",
+    course: "Counselling Student",
+    text: "Bahut hi useful guidance mili yaha se.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=200&h=200&auto=format&fit=crop"
   }
 ];
 
@@ -94,6 +185,7 @@ export default function Testimonials() {
                       alt={t.name} 
                       className="w-12 h-12 rounded-full object-cover border-2 border-brand-orange-start" 
                       loading="lazy"
+                      referrerPolicy="no-referrer"
                     />
                     <div>
                       <h4 className="font-bold text-brand-blue">{t.name}</h4>

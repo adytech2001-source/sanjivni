@@ -11,6 +11,7 @@ import VisionMission from "@/components/VisionMission"
 import Courses from "@/components/Courses"
 import SuccessStories from "@/components/SuccessStories"
 import Stats from "@/components/Stats"
+import DocsChecklist from "@/components/DocsChecklist"
 import Updates from "@/components/Updates"
 import Testimonials from "@/components/Testimonials"
 import FAQ from "@/components/FAQ"
@@ -40,6 +41,7 @@ export default function Home() {
       <Courses />
       <SuccessStories />
       <Stats />
+      <DocsChecklist />
       <Updates />
       <Testimonials />
       <FAQ />
