@@ -2,16 +2,17 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { GraduationCap, School, Building2, MapPin, Search, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import Counter from "./ui/Counter";
 
 const universities = [
-  { name: "IIT Bombay", category: "Engineering", location: "Maharashtra", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg/1200px-Indian_Institute_of_Technology_Bombay_Logo.svg.png" },
-  { name: "AIIMS Delhi", category: "Medical", location: "Delhi", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/0/08/All_India_Institute_of_Medical_Sciences%2C_New_Delhi_Logo.svg/1200px-All_India_Institute_of_Medical_Sciences%2C_New_Delhi_Logo.svg.png" },
-  { name: "VNIT Nagpur", category: "Engineering", location: "Maharashtra", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/VNIT_Nagpur_logo.png/220px-VNIT_Nagpur_logo.png" },
-  { name: "IIT Indore", category: "Engineering", location: "Madhya Pradesh", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b2/Indian_Institute_of_Technology_Indore_logo.png/220px-Indian_Institute_of_Technology_Indore_logo.png" },
-  { name: "AIIMS Raipur", category: "Medical", location: "Chhattisgarh", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/All_India_Institute_of_Medical_Sciences%2C_Raipur_logo.png/220px-All_India_Institute_of_Medical_Sciences%2C_Raipur_logo.png" },
-  { name: "COEP Pune", category: "Engineering", location: "Maharashtra", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/COEP_logo.png/220px-COEP_logo.png" },
-  { name: "DAVV Indore", category: "University", location: "Madhya Pradesh", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Devi_Ahilya_Vishwavidyalaya_logo.png/220px-Devi_Ahilya_Vishwavidyalaya_logo.png" },
-  { name: "NIT Raipur", category: "Engineering", location: "Chhattisgarh", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/National_Institute_of_Technology%2C_Raipur_logo.png/220px-National_Institute_of_Technology%2C_Raipur_logo.png" },
+  { name: "IIT Bombay", category: "Engineering", location: "Maharashtra", logo: "https://upload.wikimedia.org/wikipedia/en/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg" },
+  { name: "AIIMS Delhi", category: "Medical", location: "Delhi", logo: "https://upload.wikimedia.org/wikipedia/en/8/85/All_India_Institute_of_Medical_Sciences%2C_Delhi.svg" },
+  { name: "VNIT Nagpur", category: "Engineering", location: "Maharashtra", logo: "https://upload.wikimedia.org/wikipedia/en/3/36/VNIT_logo.jpeg" },
+  { name: "IIT Indore", category: "Engineering", location: "Madhya Pradesh", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/14/IITI_Logo.svg/1280px-IITI_Logo.svg.png" },
+  { name: "AIIMS Raipur", category: "Medical", location: "Chhattisgarh", logo: "https://upload.wikimedia.org/wikipedia/en/5/5c/All_India_Institute_of_Medical_Sciences%2C_Raipur_logo.png" },
+  { name: "COEP Pune", category: "Engineering", location: "Maharashtra", logo: "https://open.ieee.org/wp-content/uploads/COEP-Technological-University-Pune-NEW.png" },
+  { name: "DAVV Indore", category: "University", location: "Madhya Pradesh", logo: "https://upload.wikimedia.org/wikipedia/en/a/ae/Devi_Ahilya_Vishwavidyalaya_Logo.png" },
+  { name: "NIT Raipur", category: "Engineering", location: "Chhattisgarh", logo: "https://upload.wikimedia.org/wikipedia/en/1/1f/National_Institute_of_Technology%2C_Raipur_Logo.png" },
 ];
 
 export default function UniversitySelections() {
@@ -179,12 +180,16 @@ export default function UniversitySelections() {
             </div>
             <div className="h-px w-full md:w-px md:h-12 bg-white/10" />
             <div className="text-center md:text-left">
-              <p className="text-brand-light-blue font-bold text-3xl mb-1">100%</p>
+              <div className="text-brand-light-blue font-bold text-3xl mb-1">
+                <Counter value={100} suffix="%" />
+              </div>
               <p className="text-white/60 text-sm uppercase tracking-widest">Placement Support</p>
             </div>
             <div className="h-px w-full md:w-px md:h-12 bg-white/10" />
             <div className="text-center md:text-left">
-              <p className="text-brand-light-blue font-bold text-3xl mb-1">10+</p>
+              <div className="text-brand-light-blue font-bold text-3xl mb-1">
+                <Counter value={10} suffix="+" />
+              </div>
               <p className="text-white/60 text-sm uppercase tracking-widest">Years of Trust</p>
             </div>
           </div>

@@ -5,6 +5,7 @@ import { useEffect } from "react"
 import Hero from "@/components/Hero"
 import NoticeSection from "@/components/NoticeSection"
 import UniversitySelections from "@/components/UniversitySelections"
+import NeetUgGuidance from "@/components/NeetUgGuidance"
 import About from "@/components/About"
 import FounderSection from "@/components/FounderSection"
 import VisionMission from "@/components/VisionMission"
@@ -35,6 +36,7 @@ export default function Home() {
       <Hero />
       <NoticeSection />
       <UniversitySelections />
+      <NeetUgGuidance />
       <About />
       <FounderSection />
       <VisionMission />

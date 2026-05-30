@@ -101,7 +101,7 @@ export default function SuccessStories() {
           >
             <h2 className="text-brand-gold font-bold text-lg mb-2 uppercase tracking-wider">Our Success Stories</h2>
             <h3 className="text-4xl md:text-5xl font-extrabold text-brand-navy mb-4">
-              Chhattisgarh NEET-UG 2025 <br className="hidden md:block" />
+              NEET-UG 2025 <br className="hidden md:block" />
               <span className="text-brand-light-blue">Allotment Success Stories</span>
             </h3>
             <p className="text-gray-500 max-w-2xl mx-auto text-lg">

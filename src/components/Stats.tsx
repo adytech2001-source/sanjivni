@@ -1,11 +1,12 @@
 import { motion } from "motion/react";
+import Counter from "./ui/Counter";
 
 const stats = [
-  { label: "Years Experience", value: "10+" },
-  { label: "Students Admitted", value: "1000+" },
-  { label: "Tie-ups in India", value: "25+" },
-  { label: "Colleges", value: "100+" },
-  { label: "Courses", value: "20+" },
+  { label: "Years Experience", value: 10, suffix: "+" },
+  { label: "Students Admitted", value: 1000, suffix: "+" },
+  { label: "Tie-ups in India", value: 25, suffix: "+" },
+  { label: "Colleges", value: 100, suffix: "+" },
+  { label: "Courses", value: 20, suffix: "+" },
 ];
 
 export default function Stats() {
@@ -27,9 +28,9 @@ export default function Stats() {
               transition={{ delay: i * 0.1 }}
               className="text-center"
             >
-              <p className="text-4xl md:text-5xl font-extrabold text-brand-light-blue mb-2">
-                {stat.value}
-              </p>
+              <div className="text-4xl md:text-5xl font-extrabold text-brand-light-blue mb-2">
+                <Counter value={stat.value} suffix={stat.suffix} />
+              </div>
               <p className="text-white/70 font-medium uppercase tracking-wider text-sm">
                 {stat.label}
               </p>

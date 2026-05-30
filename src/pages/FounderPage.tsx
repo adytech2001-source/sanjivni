@@ -47,7 +47,7 @@ export default function FounderPage() {
                 <p className="text-brand-navy italic text-xl font-medium mb-4">
                   "Every student deserves the right guidance to reach their full potential. Our goal is to help you achieve your dreams with confidence and clarity."
                 </p>
-                <p className="text-brand-gold font-bold">— Shersing V. Tembhurnikar</p>
+                <p className="text-brand-navy font-bold">— Shersing V. Tembhurnikar</p>
               </div>
 
               <h3 className="text-2xl font-bold text-brand-navy mb-6">Qualifications & Expertise</h3>

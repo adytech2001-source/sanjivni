@@ -26,7 +26,7 @@ export default function FounderSection() {
               <p className="text-brand-navy italic font-medium text-sm mb-2">
                 "Every student deserves the right guidance. Our goal is to help you achieve your dreams with confidence and clarity."
               </p>
-              <p className="text-brand-gold font-bold text-sm">— Founder Message</p>
+              <p className="text-brand-navy font-bold text-sm">— Founder Message</p>
             </div>
           </motion.div>
 
@@ -35,9 +35,9 @@ export default function FounderSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-brand-gold font-bold text-lg mb-2 uppercase tracking-wider">Meet Our Founder</h2>
+            <h2 className="text-brand-navy font-bold text-lg mb-2 uppercase tracking-wider">Meet Our Founder</h2>
             <h3 className="text-4xl md:text-5xl font-extrabold text-brand-navy mb-4 leading-tight">
-              Shersing V. <span className="text-brand-light-blue">Tembhurnikar</span>
+              Shersing V. Tembhurnikar
             </h3>
             <p className="text-brand-navy font-bold text-xl mb-4">Professional Admission Counselor</p>
             

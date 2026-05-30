@@ -33,7 +33,7 @@ const testimonials = [
   },
   {
     name: "Drishti Rajendra Bopche",
-    course: "Counselling Student",
+    course: "MBBS Student",
     text: "College selection me bahut help hui, recommend karungi.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=200&h=200&auto=format&fit=crop"
@@ -61,10 +61,10 @@ const testimonials = [
   },
   {
     name: "Anshika Tembhare",
-    course: "Counselling Student",
+    course: "MBBS Student",
     text: "Simple aur clear guidance, easily samajh aa gaya.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=200&h=200&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/dmyryvwos/image/upload/f_auto,q_auto/student_ktssll"
   },
   {
     name: "Yashwardhan Puri",
@@ -89,7 +89,7 @@ const testimonials = [
   },
   {
     name: "Lalita Dalikram Pataihe",
-    course: "Counselling Student",
+    course: "MBBS Student",
     text: "Bahut acha experience raha, thank you.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1563236710-85f69c5e6f66?q=80&w=200&h=200&auto=format&fit=crop"
@@ -124,14 +124,14 @@ const testimonials = [
   },
   {
     name: "Anshika Yopendrsingh Tembhre",
-    course: "Counselling Student",
+    course: "MBBS Student",
     text: "Confusion door ho gaya counseling ke baad.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1557053910-d9eadeed1c58?q=80&w=200&h=200&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/dmyryvwos/image/upload/f_auto,q_auto/student_ktssll"
   },
   {
     name: "Kushal Purendranath Chakore",
-    course: "Counselling Student",
+    course: "MBBS Student",
     text: "Bahut hi useful guidance mili yaha se.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=200&h=200&auto=format&fit=crop"
@@ -155,47 +155,51 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              viewport={{ once: true }}
+        <div className="relative overflow-hidden py-10">
+          <div className="flex">
+            <motion.div 
+              className="flex gap-6 pr-6"
+              animate={{ x: ["0%", "-50%"] }}
               transition={{ 
-                type: "spring",
-                stiffness: 400,
-                damping: 25,
-                delay: i * 0.1 
+                duration: 40, 
+                repeat: Infinity, 
+                ease: "linear" 
               }}
             >
-              <Card className="h-full border-none bg-gray-50 relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 text-brand-orange-start/10 group-hover:text-brand-orange-start/20 transition-colors">
-                  <Quote size={60} />
-                </div>
-                <CardContent className="p-8 relative z-10">
-                  <div className="flex text-yellow-400 mb-4">
-                    {[...Array(t.rating)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
-                  </div>
-                  <p className="text-gray-600 italic mb-8 leading-relaxed">"{t.text}"</p>
-                  <div className="flex items-center gap-4">
-                    <img 
-                      src={t.image} 
-                      alt={t.name} 
-                      className="w-12 h-12 rounded-full object-cover border-2 border-brand-orange-start" 
-                      loading="lazy"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div>
-                      <h4 className="font-bold text-brand-blue">{t.name}</h4>
-                      <p className="text-xs text-gray-500 font-medium">{t.course}</p>
+              {[...testimonials, ...testimonials].map((t, i) => (
+                <div key={i} className="w-[320px] flex-shrink-0">
+                  <Card className="h-full border-none bg-gray-50/50 hover:bg-gray-50 transition-colors relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 p-4 text-brand-orange-start/10 group-hover:text-brand-orange-start/20 transition-colors">
+                      <Quote size={40} />
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                    <CardContent className="p-6 relative z-10">
+                      <div className="flex text-yellow-500 mb-3">
+                        {[...Array(t.rating)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
+                      </div>
+                      <p className="text-gray-700 italic mb-6 leading-relaxed text-sm">"{t.text}"</p>
+                      <div className="flex items-center gap-3">
+                        <img 
+                          src={t.image} 
+                          alt={t.name} 
+                          className="w-10 h-10 rounded-full object-cover border-2 border-brand-orange-start/30" 
+                          loading="lazy"
+                          referrerPolicy="no-referrer"
+                        />
+                        <div>
+                          <h4 className="font-bold text-brand-blue text-sm">{t.name}</h4>
+                          <p className="text-[10px] text-gray-500 font-medium">{t.course}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
             </motion.div>
-          ))}
+          </div>
+
+          {/* Gradient Overlays */}
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-20 pointer-events-none" />
         </div>
       </div>
     </section>

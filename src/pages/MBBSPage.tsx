@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Stethoscope, CheckCircle2, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LeadForm from "@/components/LeadForm";
+import NeetUgGuidance from "@/components/NeetUgGuidance";
 
 export default function MBBSPage() {
   useEffect(() => {
@@ -86,6 +87,8 @@ export default function MBBSPage() {
           </div>
         </div>
       </section>
+
+      <NeetUgGuidance />
 
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
