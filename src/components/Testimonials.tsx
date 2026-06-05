@@ -71,14 +71,14 @@ const testimonials = [
     course: "Future Professional",
     text: "Career ke liye best decision lene me help mili.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/dmyryvwos/image/upload/v1780498068/YASHWARDHAN_PURI_jsqs99.png"
   },
   {
     name: "Aman Rupesh Ramteke",
     course: "Medical Aspirant",
     text: "Mujhe kaafi clarity mili future ke liye.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1542343633-ce3256121f03?q=80&w=200&h=200&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/dmyryvwos/image/upload/v1780498069/AMAN_brnmlt.png"
   },
   {
     name: "Riya Yesharam Dhabale",
@@ -120,7 +120,7 @@ const testimonials = [
     course: "Career Aspirant",
     text: "Clear roadmap diya gaya career ka.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?q=80&w=200&h=200&auto=format&fit=crop"
+    image: "https://res.cloudinary.com/dmyryvwos/image/upload/v1780498068/YASHWARDHAN_PURI_jsqs99.png"
   },
   {
     name: "Anshika Yopendrsingh Tembhre",

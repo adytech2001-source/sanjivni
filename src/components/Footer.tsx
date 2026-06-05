@@ -121,11 +121,25 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-10 border-t border-white/10 text-center text-white/40 text-sm flex flex-col items-center gap-1">
+        <div className="pt-10 border-t border-white/10 text-center text-white/40 text-sm flex flex-col items-center gap-2">
           <p>© 2026 Sanjivani Career Counselling. All Rights Reserved.</p>
-          <p>
-            Design by <a href="tel:7581001715" className="hover:text-brand-light-blue transition-colors font-medium">Aybuzz Digital Marketing</a> | Call: <a href="tel:7581001715" className="hover:text-brand-light-blue transition-colors">7581001715</a>
-          </p>
+          <div className="mt-2 flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-white/50 text-xs sm:text-sm">
+            <a 
+              href="https://adybuzz.com" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="hover:text-brand-light-blue transition-colors font-semibold tracking-wide"
+            >
+              Website Developed by Adybuzz
+            </a>
+            <span className="hidden sm:inline text-white/20">|</span>
+            <a 
+              href="tel:7581001715" 
+              className="hover:text-brand-light-blue transition-colors flex items-center gap-1.5"
+            >
+              Call: <span className="font-semibold underline underline-offset-2">7581001715</span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
